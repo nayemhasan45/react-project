@@ -5,15 +5,23 @@ import './Cart.css';
 
 const Cart = ({ cart }) => {
     console.log(cart);
+    let total = 0;
+    let shippingCost = 0;
+    for (const product of cart) {
+        total += product.price;
+        shippingCost += product.shipping;
+    }
+    const tax = parseFloat((total * 0.1).toFixed(4));
+    const grandTotal = total + shippingCost + tax;
     return (
         <div className='cart'>
             <div className="cart-text">
                 <h5>Order Summary</h5>
                 <p>Selected item: {cart.length}</p>
-                <p>Total Price: $</p>
-                <p>Total Shipping Charge: $</p>
-                <p>Tax: $</p>
-                <h3>Grand Total: $</h3>
+                <p>Total Price: ${total}</p>
+                <p>Total Shipping Charge: ${shippingCost}</p>
+                <p>Tax: ${tax}</p>
+                <h3>Grand Total: ${grandTotal}</h3>
             </div>
 
             <div className='cart-btn'>

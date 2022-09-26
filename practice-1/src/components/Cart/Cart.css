@@ -1,0 +1,51 @@
+.cart {
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    /* margin: 0px; */
+}
+
+.cart h5 {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    text-align: center;
+    color: #1C2B35;
+}
+
+.cart-text {
+    padding-bottom: 70px;
+}
+
+.cart-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+}
+
+.cart-btn button {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: white;
+}
+
+.cart-btn button p {
+    padding-right: 10px;
+}
+
+.cart-btn button:nth-child(1) {
+    background-color: #FF3030;
+
+}
+
+.cart-btn button:nth-child(2) {
+    background-color: #FF9900;
+}
